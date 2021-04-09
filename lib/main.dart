@@ -12,28 +12,56 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        fontFamily: 'Baskerville',
+        textTheme: TextTheme(
+          headline1: TextStyle(fontSize: 30),
+          headline2: TextStyle(fontSize: 30, color: Color(0xff112134)),
+          bodyText1: TextStyle(
+            fontFamily: 'Ubuntu',
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+            height: 1.8,
+          ),
+        ),
       ),
-      home: Scaffold(
+      home: Home(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  const Home({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
         appBar: AppBar(
           title: Text(
             "Demo Text",
           ),
         ),
-        body: Center(
-          child: Text(
-            "Hello World Tes",
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.w600,
-              color: Colors.deepPurple,
-              backgroundColor: Colors.greenAccent,
-              fontStyle: FontStyle.normal,
-              fontFamily: 'Baskerville',
-            ),
+        body: Container(
+          padding: EdgeInsets.all(8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "New Modern Vase",
+                style: Theme.of(context).textTheme.headline1,
+              ),
+              Text(
+                "Studiopepe for Atipico",
+                style: Theme.of(context).textTheme.headline2,
+              ),
+              Text(
+                "Italy is the stronghold of the creative designer. Founded in 2006 by Arianna Lelli Miami and Chiara Di Pinto ...",
+                style: Theme.of(context).textTheme.bodyText1,
+              ),
+            ],
           ),
-        ),
-      ),
-      debugShowCheckedModeBanner: false,
-    );
+        ));
   }
 }
