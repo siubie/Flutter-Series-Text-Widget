@@ -17,13 +17,15 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             "Demo Text",
-            style: TextStyle(fontSize: 40),
           ),
         ),
         body: Center(
           child: Text(
-            "Hello World",
-            style: TextStyle(fontSize: 40),
+            "Hello World Tes",
+            style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ),
       ),
