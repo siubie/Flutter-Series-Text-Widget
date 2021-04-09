@@ -63,6 +63,10 @@ flutter:
       fonts:
         - asset: assets/fonts/Baskerville-Regular.ttf
           style: normal
+    - family: Ubuntu
+      fonts:
+        - asset: assets/fonts/Ubuntu-Light.ttf
+          weight: 300
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
